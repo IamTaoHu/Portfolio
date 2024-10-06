@@ -1,0 +1,445 @@
+a:link{
+	color: #000000; 
+} /* unvisited link */
+a:visited{
+	color: #000000;
+} /* visited link */
+a:hover{ 
+	color: #F7D8BA;
+    transition: color 0.3s ease;
+} /* mouse over link */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+#imgLOGO, #imgLOGOmain, #imgMe, #imgShow {
+    max-width: 100%;
+    height: auto;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* div flex */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+    justify-content: center; /* Adjust alignment for small screens */
+    align-items: center;  /* Vertically align items */
+    justify-content: space-around; /* Add space between text and image */
+    text-align: left;
+    padding: 20px;
+}
+.flex_container > div{
+    border: 2px solid yellow;
+    width: 150px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.text-container {
+    max-width: 50%;
+}
+
+/* Grid display */
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr; /* Ensure grid adapts to one column on small screens */
+    grid-template-columns: auto;
+    grid-gap: 5px;
+}
+
+.grid-container > div{
+    border: 1px solid black;
+    background-color:rgb(252, 125, 125);
+}
+
+#imgLOGO{
+    width: 40%;
+    height: auto;
+}
+#imgLOGOmain{
+    width: 10%;
+}
+#imgMe {
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 500px;
+    width: 30%;
+    height: auto;
+}
+#imgShow{
+    border: 5px solid black;
+    width: 40%;
+    height: auto;
+}
+
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: #F7D8BA;
+    background-color: black;
+}
+
+.logo img {
+    width: 120px; /* Adjust logo size as needed */
+}
+
+/* Navigation menu styling */
+.nav-menu {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #F7D8BA;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ffffff; /* Changes color on hover */
+}
+
+/* MainHome */
+#mainHome{
+    background-color: #ffffff; /* White background */
+    grid-column: 1 / span 8;
+    text-align: center;
+}
+#mainHome h1{
+    color: black;
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+#mainHome h3{
+    color: black;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+#mainAboutMe1{
+    color: rgb(0, 0, 0);
+    grid-column: 1 / span 4;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 50px;
+    font-size: 20px;
+    
+}
+
+#mainAboutMe2 {
+    text-align: center;
+    padding: 20px;
+    color: #F7D8BA;
+    font-family: 'Arial', sans-serif;
+    background-image: url(img/BG101.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#mainAboutMe2 h1 {
+    color: white;
+    font-size: 2.5em;
+    font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.skills-grid {
+    display: grid;
+    margin-bottom: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-gap: 20px;
+  }
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.skill-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #F7D8BA;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.progress-container {
+    width: 60%;
+    background-color: #5B6064;
+    border-radius: 10px;
+    height: 12px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #F7D8BA;
+    border-radius: 10px 0 0 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* Flex container for the projects */
+#projects h1{
+    text-align: center;
+    color: black;
+    font-size: 2.5em;
+    font-size: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: center; /* Centers the items horizontally */
+    gap: 20px; /* Adds space between project items */
+    margin: 0 auto; /* Centers the entire container */
+    max-width: 1200px; /* Limits the maximum width for better layout */
+}
+
+/* Individual project styling */
+.project-item {
+    flex-basis: calc(33.33% - 40px); /* Sets the width of each project item to 33% (for 3 items per row) minus the gap */
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Image styling */
+.project-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover; /* Ensures the image fills the box and maintains aspect ratio */
+    margin-bottom: 10px;
+}
+
+/* Text link styling */
+.project-item a {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.project-item a:hover {
+    color: #ff6347; /* Add hover effect */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .project-item {
+        flex-basis: calc(50% - 40px); /* Changes to 2 items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-item {
+        flex-basis: 100%; /* Changes to 1 item per row on small screens */
+    }
+}
+
+
+
+#Contact{
+    grid-column: 1 / span 8;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* Main container styling */
+.container {
+    background-color: black; /* White background */
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+/* Social Section Styling */
+.social {
+    background-color: black; /* Dark blue background */
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.social h1 {
+    font-size: 60px;
+    margin-bottom: 30px;
+    color: #F7D8BA;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.social-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15%;
+}
+
+.social-item span {
+    font-size: 30px;
+    color: #F7D8BA;
+}
+
+/* Container for both social and contact */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* ระยะห่างระหว่างสองส่วน */
+}
+
+.social, .contact {
+    flex: 1; /* แบ่งพื้นที่เท่าๆ กัน */
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* Contact Section Styling */
+.contact {
+    background-image: url('img/kmutt-bg.jpg'); /* พื้นหลังรูปภาพ */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 50px;
+    color: #FFFFFF; /* สีข้อความ */
+    border-radius: 20px;
+    
+}
+
+.contact h1 {
+    margin-top: 10%;
+    font-size: 60px;
+    color: #F7D8BA; /* สีหัวข้อ */
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 24px;
+    line-height: 1.5;
+    color: #FFFFFF; /* สีเนื้อหา */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15%;
+    gap: 15px;
+}
+
+input, textarea {
+    background-color: #5B6064;
+    border: none;
+    padding: 30px;
+    border-radius: 20px;
+    color: #F7D8BA;
+    font-size: 20px;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+button {
+    background-color: #F7D8BA;
+    color: black;
+    border: none;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e8c8b0;
+}
+
+.project-info{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 20px;
+}
+
+#imginfo{
+    height: 800px;
+    width: auto;
+}
+
+@media only screen and (max-width: 750px) {
+    /* Adjust the layout of the text and image to be stacked vertically */
+    .flex-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;    /* Center them horizontally */
+    }
+
+    .text-container {
+        max-width: 90%; /* Adjust text container width */
+        font-size: 16px; /* Adjust the text size for readability */
+        text-align: center; /* Center align the text */
+    }
+
+    #imgMe {
+        width: 60%; /* Adjust the image size for smaller screens */
+        margin-top: 20px; /* Add space between text and image */
+    }
+
+    /* Adjust the font sizes */
+    #mainHome h1 {
+        font-size: 30px; /* Smaller heading */
+    }
+
+    #mainHome h3 {
+        font-size: 18px; /* Smaller subheading */
+    }
+
+    /* Adjust skills grid for smaller screens */
+    .skills-grid {
+        grid-template-columns: 1fr; /* Change to single column grid */
+    }
+
+    /* Reduce padding and margins */
+    .header {
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    .nav-menu a {
+        font-size: 10px; /* Reduce font size of nav links */
+    }
+
+    .container {
+        flex-direction: column; /* Stack social and contact sections */
+        padding: 10px;
+    }
+
+    .social h1, .contact h1 {
+        font-size: 40px; /* Smaller headings */
+    }
+}
